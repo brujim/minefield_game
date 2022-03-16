@@ -1,19 +1,106 @@
 * {
     text-align: center;
+    background-color: rgb(54, 50, 66);
 }
+
+h1 {
+    background: linear-gradient(0deg, rgb(103, 11, 116) 0%, rgb(120, 9, 172) 100%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 9px;
+    transform: perspective(200px) rotateX(-15deg);
+    border-top: 2px solid rgb(255, 30, 244);
+}
+
 #field {
     height: 500px;
     width: 500px;
-    border: solid 1px;
-    margin-left: 36%;
+    border: solid 5px;
+    border-color: rgb(125, 33, 148);
+    background-color: rgb(57, 8, 70);
+    margin: auto;
+    margin-top: 40px;
 }
+
+img {
+    background-color: transparent;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    padding: 1em 3.3em;
+    transform: perspective(200px) rotateX(15deg);
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(0deg, rgb(103, 11, 116) 0%, rgb(120, 9, 172) 100%);
+    box-shadow: rgba(255, 17, 243, 0.185) 0px 10px 29px 0px;
+    will-change: transform;
+    transition: all 0.3s;
+    border-bottom: 2px solid rgb(255, 30, 244);
+    margin: auto;
+   }
+   
+   button:hover {
+    transform: perspective(180px) rotateX(30deg) translateY(2px);
+   }
+   
+   button:active {
+    transform: perspective(170px) rotateX(36deg) translateY(5px);
+    }
 
 td {
     text-align: center;
     vertical-align: center;
-    border: solid 1px;
+    border: solid 4px;     
+    box-shadow: inset 0px 0px 10px 8px rgba(255, 198, 252, 0.5);
+    border-color: rgb(255, 57, 196);
+    background-color: rgb(248, 131, 229);
+}
+
+img {
+    width: 15px;
+    height: 15px;
+}
+
+span {
+    font-size: 25px;
+    background-color: transparent;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .invisible {
     visibility: hidden;
   }
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.purple {
+    color: purple;
+}
+
+.logo {
+    width: 77px;
+    height: 103px;
+    margin-top: 20px;
+}
