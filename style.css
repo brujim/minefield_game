@@ -30,10 +30,6 @@ img {
     background-color: transparent;
 }
 
-input {
-    margin-bottom: 20px;
-}
-
 button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
@@ -49,6 +45,7 @@ button {
     transition: all 0.3s;
     border-bottom: 2px solid rgb(255, 30, 244);
     margin: auto;
+    margin-left: 12px;
    }
    
    button:hover {

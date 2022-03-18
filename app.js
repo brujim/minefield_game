@@ -56,13 +56,15 @@ function drawTable(rows) {
 function randomMines (quantity, rows, cols) {
     var mine = [];
     while(mine.length < quantity){
+        console.log(mine) 
         var posRow = parseInt(Math.random() * rows);
-        var posCol = parseInt(Math.random() * cols); 
+        console.log(posRow)
+        var posCol = parseInt(Math.random() * cols);
+        console.log(posCol) 
         if(mine.filter(item => { return item[0] === posRow && item[1] === posCol;}).length > 0){
             continue;
         }    
-        mine.push([posRow, posCol]);
-        mine.sort();
+        mine.push([posRow, posCol]);    
     }
     return mine;   
 }
@@ -97,9 +99,21 @@ function gameHandle(event) {
 
 //New game reload
 function reload() {
-    return document.location.reload(true);  
+    document.location.reload(true);
  }
 
-var mines = randomMines(8, 10, 10) // Number of Mines / Rows / Cols
-drawTable(field(10, 10, mines)); // Rows / Cows / Mines
+function drawField (){
+    var tableSize = prompt('Whats is your table size? Example: 2, 4, 6... Max: 10');
+    if (tableSize > 10) {
+        alert('Your table cant be this size. Table auto setted to 10!')
+        tableSize = 10;
+    }
+    var minesQuantity = prompt('How much mines do you want?');
+    if (minesQuantity > (tableSize * tableSize)) {
+        minesQuantity = (tableSize * tableSize);
+    }
+    var mines = randomMines(minesQuantity, tableSize, tableSize)
+    drawTable(field(tableSize, tableSize, mines));
+}
 
+drawField();
